@@ -23,14 +23,16 @@ if (argc == 1)
 else
    srand(atoi(args[1]));
 
+/* XXX */
 FILE *f = fopen("_PATH TO YOUR TEXT FILE_", "rb");
 fseek(f, 0, SEEK_END);
 long fsize = ftell(f);
 fseek(f, 0, SEEK_SET);
 
-char* string = malloc(fsize + 1);
+char* string = malloc(fsize + 1); // Buffer overflow possible.
 fread(string, fsize, 1, f);
 fclose(f);
+/* XXX */
 
 int randint = rand() % fsize;
 int start;
