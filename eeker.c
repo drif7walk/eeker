@@ -23,7 +23,7 @@ if (argc == 1)
 else
    srand(atoi(args[1]));
 
-FILE *f = fopen("/home/GH0ST/literary.txt", "rb");
+FILE *f = fopen("_PATH TO YOUR TEXT FILE_", "rb");
 fseek(f, 0, SEEK_END);
 long fsize = ftell(f);
 fseek(f, 0, SEEK_SET);
