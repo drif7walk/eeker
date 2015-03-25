@@ -53,8 +53,6 @@ for (long i = start; i < fsize; i++)
 
 printf("\r\n");
 
-free(string);
-
 return 0;
 
 }
